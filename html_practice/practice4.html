@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=h, initial-scale=1.0">
+    <title>연습문제4</title>
+</head>
+<body>
+    <div id="aa">
+    <h2>레드향 주문하기</h2>
+    <form action ="/member/login.do" method="post">
+        <fieldset> 
+            <legend>배송 정보</legend>
+            <!-- 정렬할때
+            table
+        ul, li 쓰기도 함 -->
+            <!-- 이름 <input type="text" name="user-id"> -->
+                <ul>
+                    <li>
+                        <label for="user-id">이름</label> 
+                        <input type="text" id="user-id" required>
+                    </li>
+                    <li>
+                        <label for="user-addres">배송 주소</label> 
+                        <input type="text"id="user-addres" required>
+                    </li>
+                    <li>
+                        <label for="email">이메일</label>
+                        <input type="email" id="email" required>
+                      
+
+                    </li>
+                    <li>
+
+                        <label for="number"  >연락처 </label> 
+                        <input type="tel" id="number" required
+                        placeholder = "하이픈 빼고 입력해주세요 (01012345678)">
+                  
+                    </li>
+                    <li>
+                        <label for = "day">배송 지정</label>
+                        <input type="date" id="day">
+                        (주문일로부터 최소 3일 이후)
+                    </li>
+                </ul>
+
+        </fieldset>
+        <div>
+            <input type="submit" value="주문하기">
+            <input type="reset" value="취소하기">
+        </div>
+           
+
+
+    </form>
+    </div>
+ <h2>레드향 주문하기</h2>
+ 
+ <form>
+    <fieldset>
+    
+        <legend>상품 선택</legend>
+        <h4>주문할 상품을 선택해주세요.</h4>
+        <ul>
+      <li> <input type="checkbox" id="3"> 
+        <label for="3">선물용 3kg</label>
+        <input type="number" max="5" min="0">개 (최대 5개) </li>
+
+        <li><input type="checkbox" id="5">
+        <label for="5">선물용 5kg</label>
+        <input type="number" max="5" min="0">개 (최대 5개)</li>
+        <li>
+            <input type="checkbox" id="3k">
+            <label for="3k">가정용 3kg</label>
+            <input type="number" max="5" min="0">개 (최대 5개)
+        </li>
+        <li>
+            <input type="checkbox" id="5k">
+            <label for="5k">가정용 5kg</label>
+            <input type="number" max="5" min="0">개 (최대 5개)
+        </li>
+        </ul>
+
+        <h4>포장 선택</h4>
+        <ul>
+        <li><input type="radio" id ="case" name="case">
+        <label for ="case">선물 포장</label> </li>
+            <li> <input type="radio" id= "case2" name="case">
+                <label for= "case2" >선물 포장 안함</label>
+            
+            </li>
+
+        </ul>
+        
+    </fieldset>
+
+ </form>
+ <form>
+    <fieldset>
+        <legend>배송 정보</legend>
+        <ul>
+            <li>
+                <label for="user-id">이름</label> 
+                <input type="text" id="user-id" required>
+            </li>
+            <li>
+                <label for="user-addres">배송 주소</label> 
+                <input type="text"id="user-addres" required>
+            </li>
+            <li>
+                <label for="email">이메일</label>
+                <input type="email" id="email" required>
+              
+
+            </li>
+            <li>
+
+                <label for="number"  >연락처 </label> 
+                <input type="tel" id="number" required
+                placeholder = "하이픈 빼고 입력해주세요 (01012345678)">
+          
+            </li>
+            <li>
+                <label for = "day">배송 지정</label>
+                <input type="date" id="day">
+                (주문일로부터 최소 3일 이후)
+            </li>
+            <li>메모 
+                <textarea rows="5"></textarea>
+            </li>
+        </ul>
+    </fieldset>
+ </form>
+ 
+
+</body>
+</html>
