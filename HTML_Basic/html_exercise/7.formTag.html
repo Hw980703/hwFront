@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <!-- 폼 태그는 데이터를 전송할 때 사용된다. 
+        태그 내에서 어떤 곳으로 보낼지, 어떤 방식으로 보낼지
+        적어주어야 한다.
+        -->
+        
+        <h2>첫번째 폼(form, input)</h2>
+        <!-- form action method -->
+        <!-- 폼 속성값 input type=""
+        text, password, submit,reset -->
+        <form action = "/member/login.do" method = "get">
+            ID: <input type="text"><br>
+            PW: <input type="password"><br>
+            <input type="submit" value="로그인">
+            <input type="reset" value = "취소">
+        </form>
+        <h2>두번째 폼(action, method, name</h2>
+        <!-- 메소드 방식의 차이점 (method)
+        
+        method 방식
+        1.get: url에 입력한것이 보임. 보이게 보냄
+        2.post: 입력한것을 안보이게 보냄. 네트워크 도구를 통해 볼수는 있음
+
+        -->
+        <form action="/member/login.do" method="post">
+            <fieldset>
+                <legend>로그인 정보</legend>
+                ID: <input type ="text" name="user-id"><br>
+            PW: <input type = "password" name="user-password"><br>
+            <input type="submit" value="로그인">
+            <input type="reset" value="취소">
+            </fieldset>
+            <!-- input 태그에 타입과 네임을 꼭 적어야함
+            네임을 까먹는 경우가 많음. -->
+           
+
+        </form>
+
+        <h2>세번째 폼(html5 속성)</h2>
+        <form>
+
+            text : <input type="text"> (text)<br>
+            <mark>action = "어느곳으로 (url)" method="어떤 방식으로"</mark> <br>
+            password : <input type="password"> (password)<br>
+            submit(데이터 전송,제출) : <input type="submit" value="회원가입"> (submit)<br>
+            reset(데이터 초기화) : <input type="reset">(reset)<br>
+            <br>
+            <hr>
+            <h3><u>자주 쓰이는 속성</u></h3> <br>
+            checkbox : <input type="checkbox"> HTML5
+            <input type="checkbox">C# 
+            <input type="checkbox">JAVA
+            <em><u>체크박스는 여러개 생성,중복 체크 가능</u></em> <br>
+            radio : <input type="radio" name="gender">남 <input type="radio" name="gender">여
+            <mark>name 값을 적어줘야 둘 중 하나만 선택 가능</mark>
+            <em><u>하나만 선택할때 사용</u></em> <br>
+            button : <input type="button" value="아무 기능 없음"> 이름 적을때 value 사용<br>
+            <hr>
+            <br><br><br>
+
+         
+            <hr>
+            <u><h3>많이 사용하는 속성</h3></u>
+            file : <input type="file"><br>
+            hidden: <input type="hidden"><br>
+
+           <u>text부터 hidden까지 외워야함</u> <br>
+
+            date : <input type="date"><br>
+            datetime : <input type="datetime-local"><br>
+            number : <input type="number" max="10" min="3"><br>
+            search : <input type="search"><br>
+            email : <input type="email"> <br>
+            range : <input type="range"> <br>
+            week : <input type="week"><br>
+            textarea : <textarea rows="10" cols="10"></textarea> <em><u> textarea는 input이 아닌 textarea를 쓴다.
+            rows, cols 를 통해서 행과 열 크기 정하기 가능</em></u><br>
+
+            <hr>
+
+
+            <br><br><br><br><br>
+
+
+        </form>
+        <h3>네번째 폼</h3>
+        <form>
+            <fieldset>
+                <legend>좋아하는 음식(다중선택)</legend>
+                <label>
+                    <input type="checkbox">마라탕
+                </label>
+                <label>
+                    <input type="checkbox">햄버거
+                </label>
+              
+                    <input type="checkbox" id="dbk">
+                    <label for ="dbk">치킨</label>
+                   
+                    <input type="checkbox">피자
+                
+               
+
+            </fieldset>
+
+
+
+        </form>
+ <br><br><br><br>
+ <form>
+    <fieldset>
+        <legend>취미생활</legend>
+        <input type="radio" id="h" name="a">
+        <label for = "h"> 코딩 </label>
+      
+       <label><input type="radio" name =a>유튜브</label> 
+       <label><input type="radio" name =a>넷플릭스</label>
+        <label><input type="radio" name =a>롤</label>
+        <label><input type="radio" name =a>골프</label>
+    </fieldset>
+
+ </form>
+
+ <br><br><br><br>
+
+ <h3>다섯번째 폼 (placeholder, required)</h3>
+ <mark>ID, PW는 name으로 값을 입력할 이름을 정해줘야함</mark>
+ <br><u>placeholder = "칸 안에 글씨 표시"
+ <br>required = "입력을 해야지 넘어가게 함"</u>
+ <form action = "/member/login.do" method="post">
+    ID:<input type="text" name="user-id" placeholder="아이디를 입력 해주세요." required><br>
+    PW:<input type="password" name="user-pw" placeholder="비밀번호를 입력 해주세요." required><br>
+    <input type="submit" value="전송">
+
+ </form>
+
+
+
+ <br><br><br><br>
+
+ <h3>여섯번째 폼(select) 엄청 자주 쓰임</h3>
+ select <br>
+ option 이름 /option
+ <br>/select 
+ <form action="/member/login.do" method="get">
+ <fieldset>
+    <legend>직업을 선택하세요</legend>
+    <select name="job">
+        <option value="의사">의사</option>
+        <option value="판사">판사</option>
+        <option value="검사">검사</option>
+        <option value="강사">강사</option>
+    </select>
+    <input type="submit" value="전송">
+ </fieldset>
+
+ </form>
+    <form action ="/member/login.do" method="get">
+        <filedset>
+            <legend>가장 배우고 싶은 과목은?</legend>
+            <select name = "subject">
+                <optgroup label="자바">
+                    <option value="상속">상속</option>
+                    <option value="캡슐화">캡슐화</option>
+                    <option value="다형성">다형성</option>
+ 
+                </optgroup>
+                <optgroup label="그 외">
+                    <option value="체육">체육</option>
+                    <option value="프론트">프론트</option>
+                    <option value="백엔드">백엔드</option>
+                </optgroup>
+             <input type="submit" value="전송">
+
+            </select>
+        </filedset>
+
+    </form>
+     <br><br><br><br>
+
+    <form action="/member/login.do" method="get">
+        <fieldset>
+             <legend>좋아하는 브라우저를 선택하세요.</legend>
+                <input type="text" list="browsers">
+             <!-- <select name="brower"> -->
+                <datalist id="browsers">
+                    <option value="엣지">Edge</option>
+                    <option value="크롬">Crhome</option>
+                    <option value="웨일">Whale</option>
+                </datalist>
+        
+        </fieldset>
+          
+
+    </form>
+
+    </body>
+</html>
